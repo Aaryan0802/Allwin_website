@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Allwin Academy offers smart online learning, exams, and educational tools for students." />
+    <title>Allwin Science Academy | Best Coaching for MHT-CET JEE & NEET </title>
+    <link rel="icon" type="image/webp" href="static/logo.webp">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <nav>
+            <a href="#home" class="logo-container">
+                <img src="static/logo.webp" alt="Allwin Academy Logo" class="logo-img" loading="lazy">
+                <span class="logo-text">ALLWIN SCIENCE ACADEMY</span>
+            </a>
+            
+            <button class="nav-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#faculty">Faculty</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-wrapper" id="home">
+        <div class="cover-slide slide-1 active"></div>
+        <div class="cover-slide slide-2"></div>
+        <div class="cover-slide slide-3"></div>
+        <div class="cover-slide slide-4"></div>
+        
+        <div class="hero-content">
+            <span class="urgency-badge">Admissions Open 2026-27</span>
+            <h1>A WILL TO WIN</h1>
+            <p class="hero-subtext">Excellence in MHT-CET, NEET & JEE Coaching in Pune.</p>
+            <a href="#contact" class="cta-btn">Enroll Now →</a>
+        </div>
+    </section>
+
+    <section class="info-section" id="about" style="padding: 80px 5%; max-width: 1400px; margin: 0 auto;">
+        <div style="text-align:center; margin-bottom: 40px;">
+            <h2 style="font-size: 2.5rem; font-weight: 800;">Why Choose Allwin?</h2>
+        </div>
+        <div class="info-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="info-card" style="background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.150); text-align: center; border: 1px solid #f1f5f9;">
+                <i class="fas fa-book-open" style="font-size: 2.5rem; color: #4580c2; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Personalized Coaching</h3>
+                <p style="color: #64748b;">ALLWIN ACADEMY was founded to offer personalized learning with expert guidance, helping students build successful careers.</p>
+                <p style="color: #64748b; padding-top: 10px;">At ALLWIN, coaching focuses on conceptual clarity, strong foundations, and customized strategies to achieve student goals.</p>
+            </div>
+            <div class="info-card" style="background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.150); text-align: center; border: 1px solid #f1f5f9;">
+                <i class="fas fa-bullseye" style="font-size: 2.5rem; color: #fb4b52; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Our Mission</h3>
+                <p style="color: #64748b;">ALLWIN ACADEMY aims to provide aspiring students an exemplary learning environment where they can pursue their dreams and prepare confidently for academic challenges.</p>
+                <p style="color: #64748b; padding-top: 10px;">This commitment remains the Academy’s sole mission.</p>
+            </div>
+            <div class="info-card" style="background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.150); text-align: center; border: 1px solid #f1f5f9;">
+                <i class="fas fa-trophy" style="font-size: 2.5rem; color: #4580c2; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Podium Finish</h3>
+                <p style="color: #64748b;">At ALLWIN, “Everyone Wins” drives every action. We uphold knowledge and learning while creating a scientific, competitive environment.</p>
+                <p style="color: #64748b;padding-top: 10px;">Our goal is student success in competitive exams and top achievements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-section" id="programs">
+        <h2 class="programs-title">Our Elite Programs</h2>
+        
+        <div class="programs-grid">
+            
+            <div class="program-card" onclick="openModal('mhtcet')">
+                <h3>MHT-CET</h3>
+                <p>Engineering & Pharmacy</p>
+                <div id="mhtcet-details" style="display:none;">
+                    <h2>MHT-CET Excellence</h2>
+                    <p>Complete coaching focused on Physics, Chemistry, and Math/Bio. Exam-oriented teaching with regular tests, performance analysis, and individual attention.</p>
+                    <button class="program-btn" onclick="scrollToContact()">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="openModal('neet')">
+                <h3>NEET</h3>
+                <p>Medical Entrance</p>
+                <div id="neet-details" style="display:none;">
+                    <h2>NEET Preparation</h2>
+                    <p>Structured coaching covering Physics, Chemistry, and Biology with NCERT focus. Includes regular mock tests, rank evaluation, and dedicated one-to-one attention.</p>
+                    <button class="program-btn" onclick="scrollToContact()">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="openModal('jee')">
+                <h3>JEE</h3>
+                <p>IIT-JEE Main</p>
+                <div id="jee-details" style="display:none;">
+                    <h2>JEE Success</h2>
+                    <p>Comprehensive JEE coaching with advanced problem-solving techniques, concept clarity, and exam strategies. Regular tests and personal mentoring provided.</p>
+                    <button class="program-btn" onclick="scrollToContact()">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="openModal('boards')">
+                <h3>11th & 12th</h3>
+                <p>Boards Excellence</p>
+                <div id="boards-details" style="display:none;">
+                    <h2>Academic Mastery</h2>
+                    <p>Strong foundation courses for 11th and 12th board students across the Science stream. Board exam writing practice and continuous individual attention.</p>
+                    <button class="program-btn" onclick="scrollToContact()">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="openModal('boards10')">
+                <h3>10th Boards</h3>
+                <p>SSC & CBSE Preparation</p>
+                <div id="boards10-details" style="display:none;">
+                    <h2>10th Board Excellence</h2>
+                    <p>Complete 10th board preparation for Science and Math with a focus on scoring techniques, paper presentation, and regular unit tests. We ensure every student gets proper attention.</p>
+                    <button class="program-btn" onclick="scrollToContact()">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="openModal('foundation')">
+                <h3>Foundation</h3>
+                <p>8th & 9th Standard</p>
+                <div id="foundation-details" style="display:none;">
+                    <h2>Strong Foundation</h2>
+                    <p>Build a solid academic foundation early on. Our course focuses on deep conceptual clarity in Science and Mathematics to prepare younger students for future competitive exams like JEE and NEET.</p>
+                    <button class="program-btn" onclick="scrollToContact()">Enquire Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="faculty-section" id="faculty" style="padding: 80px 5%; text-align: center;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">Expert Faculty</h2>
+        <p style="color: #64748b; margin-bottom: 40px;">Learn from industry leaders with years of teaching excellence.</p>
+        
+        <div class="faculty-carousel-wrapper" style="max-width: 1200px; margin: 0 auto; overflow: hidden; border-radius: 20px;">
+            <div class="faculty-track" id="facultyTrack" style="display: flex; transition: transform 0.6s ease;">
+                
+                <div class="faculty-card" style="min-width: 33.333%; padding: 10px; flex-shrink: 0;">
+                    <div class="faculty-inner" style="height: 400px; border-radius: 15px; overflow: hidden; background-image:url('static/faculty1.webp'); background-size: cover; background-position: center; position: relative;">
+                        <div class="faculty-info" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 20px 20px; background: linear-gradient(transparent, rgba(15,23,42,0.95)); color: white; text-align: left;">
+                            <h3 style="font-size: 1.4rem;">Snehal Ma'am</h3>
+                            <p style="color: #fb4b52; font-weight: 700;">M.Sc. SET (Biology)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card" style="min-width: 33.333%; padding: 10px; flex-shrink: 0;">
+                    <div class="faculty-inner" style="height: 400px; border-radius: 15px; overflow: hidden; background-image:url('static/faculty2.webp'); background-size: cover; background-position: center; position: relative;">
+                        <div class="faculty-info" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 20px 20px; background: linear-gradient(transparent, rgba(15,23,42,0.95)); color: white; text-align: left;">
+                            <h3 style="font-size: 1.4rem;">Gaurav Sir</h3>
+                            <p style="color: #fb4b52; font-weight: 700;">Physics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card" style="min-width: 33.333%; padding: 10px; flex-shrink: 0;">
+                    <div class="faculty-inner" style="height: 400px; border-radius: 15px; overflow: hidden; background-image:url('static/faculty3.webp'); background-size: cover; background-position: center; position: relative;">
+                        <div class="faculty-info" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 20px 20px; background: linear-gradient(transparent, rgba(15,23,42,0.95)); color: white; text-align: left;">
+                            <h3 style="font-size: 1.4rem;">Vishal Sir</h3>
+                            <p style="color: #fb4b52; font-weight: 700;">Chemistry</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faculty-card" style="min-width: 33.333%; padding: 10px; flex-shrink: 0;">
+                    <div class="faculty-inner" style="height: 400px; border-radius: 15px; overflow: hidden; background-image:url('static/faculty4.webp'); background-size: cover; background-position: center; position: relative;">
+                        <div class="faculty-info" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 20px 20px; background: linear-gradient(transparent, rgba(15,23,42,0.95)); color: white; text-align: left;">
+                            <h3 style="font-size: 1.4rem;">Pooja Ma'am</h3>
+                            <p style="color: #fb4b52; font-weight: 700;">M.Sc. (Mathematics)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card" style="min-width: 33.333%; padding: 10px; flex-shrink: 0;">
+                    <div class="faculty-inner" style="height: 400px; border-radius: 15px; overflow: hidden; background-image:url('static/faculty5.webp'); background-size: cover; background-position: center; position: relative;">
+                        <div class="faculty-info" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 20px 20px; background: linear-gradient(transparent, rgba(15,23,42,0.95)); color: white; text-align: left;">
+                            <h3 style="font-size: 1.4rem;">Nikita Ma'am</h3>
+                            <p style="color: #fb4b52; font-weight: 700;">Social Science</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card" style="min-width: 33.333%; padding: 10px; flex-shrink: 0;">
+                    <div class="faculty-inner" style="height: 400px; border-radius: 15px; overflow: hidden; background-image:url('static/faculty6.webp'); background-size: cover; background-position: center; position: relative;">
+                        <div class="faculty-info" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 20px 20px; background: linear-gradient(transparent, rgba(15,23,42,0.95)); color: white; text-align: left;">
+                            <h3 style="font-size: 1.4rem;">Atul Sir</h3>
+                            <p style="color: #fb4b52; font-weight: 700;">Maths</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+            <button onclick="moveFaculty(-1)" style="padding:10px 20px; border-radius:30px; border:2px solid #4580c2; color: #4580c2; background:none; cursor:pointer; font-size: 1.2rem; transition: 0.3s;">❮</button>
+            <button onclick="moveFaculty(1)" style="padding:10px 20px; border-radius:30px; border:2px solid #4580c2; color: #4580c2; background:none; cursor:pointer; font-size: 1.2rem; transition: 0.3s;">❯</button>
+        </div>
+    </section>
+
+    <section class="testimonial-section" id="testimonials">
+        <div class="testimonial-container">
+            
+            <div class="testimonial-content">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <h2>Hear From Our Achievers</h2>
+                <p>At Allwin Science Academy, our greatest pride is the success of our students. Through dedicated mentorship, rigorous practice, and a supportive environment, we help turn ambitious dreams into incredible realities.</p>
+                
+                <div class="success-stat">
+                    <div class="stat-number">98%</div>
+                    <div>
+                        <p style="margin: 0; font-weight: 800; color: #1e293b; font-size: 1.1rem;">Success Rate</p>
+                        <p style="margin: 0; font-size: 0.95rem; color: #64748b;">In top competitive exams</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-video-wrapper">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=YOUR_VIDEO_ID" 
+                        title="Student Testimonial" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-padding" id="gallery" style="padding: 80px 5%; background: #f1f5f9; text-align: center;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Campus Experience</h2>
+        <div class="gallery-thumb-container" style="max-width: 600px; margin: 0 auto 30px auto; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <img src="static/gallery1.webp" id="gallery-rotate" alt="Allwin Campus" style="width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
+        </div>
+        <a href="photos.html" style="display: inline-block; padding: 12px 30px; background: white; color: #4580c2; font-weight: 700; text-decoration: none; border-radius: 50px; border: 2px solid #4580c2; transition: 0.3s;">View Full Photo Gallery →</a>
+    </section>
+
+    <footer id="contact" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 5% 40px; width: 100%;">
+        <div class="footer-content" style="display: flex; gap: 40px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap;">
+            
+            <div class="footer-map" style="flex: 1; min-width: 300px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Visit Us</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">Dhanashree Building, above Sai Cafe Katta,</p>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Balaji Nagar, Dhankawadi, Pune-43.</p>
+                <p style="font-weight: 700; margin-bottom: 20px; color: white;">Phone: +91 90499 88399</p>
+                
+                <div class="map-container" style="width: 100%; height: 250px; border-radius: 15px; overflow: hidden; margin-top: 15px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4702.151745765841!2d73.85692940035088!3d18.46513387401364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb429b2fe773%3A0xcff498e0c778d9a3!2sAllwin%20Academy!5e0!3m2!1sen!2sin!4v1769959564008!5m2!1sen!2sin" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form" style="flex: 1; min-width: 300px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Enquire Now</h3>
+                <form action="enquiries.php" method="POST">
+                    <input type="text" name="name" placeholder="Full Name" required style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-family: inherit;">
+                    <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-family: inherit;">
+                    <select name="course" required style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-family: inherit;">
+                        <option value="" disabled selected style="color: #000;">Select Course</option>
+                        <option value="jee" style="color: #000;">JEE</option>
+                        <option value="neet" style="color: #000;">NEET</option>
+                        <option value="mht-cet" style="color: #000;">MHT-CET</option>
+                        <option value="boards-11-12" style="color: #000;">11th & 12th Boards</option>
+                        <option value="boards-10" style="color: #000;">10th Boards</option>
+                    </select>
+                    <button type="submit" class="submit-btn" style="width: 100%; padding: 15px; background: #fb4b52; color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 1.1rem; cursor: pointer;">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="social-float" id="socialBox">
+            <a href="tel:+919049988399" class="social-icon phone-dialer" aria-label="Call Us" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+            <a href="https://wa.me/919049988399" target="_blank" class="social-icon" style="text-decoration: none;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/allwin_academy_pune" target="_blank" class="social-icon" style="text-decoration: none;"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon" style="text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; opacity: 0.6; font-size: 0.9rem;">
+            © 2026 Allwin Science Academy. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="modal" id="programModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 9999; padding: 20px;">
+        <div class="modal-card" style="background: white; width: 100%; max-width: 500px; padding: 30px; border-radius: 20px; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+            <span class="close-btn" onclick="closeModal()" style="position: absolute; top: 20px; right: 25px; font-size: 1.5rem; cursor: pointer; color: #64748b;">✕</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // 2. Hero Background Slideshow
+        const slides = document.querySelectorAll('.cover-slide');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000);
+
+        // ==========================================
+        // 3. SMART FACULTY AUTO-SCROLL (DESKTOP & MOBILE)
+        // ==========================================
+        const facultyTrack = document.getElementById('facultyTrack');
+        let facultyTimer;
+
+        // Function to move one card left or right
+        function moveFaculty(dir) {
+            if (!facultyTrack) return;
+            const cardWidth = facultyTrack.querySelector('.faculty-card').offsetWidth;
+            facultyTrack.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+            
+            // Reset the timer if a user manually clicks an arrow
+            resetFacultyAutoScroll();
+        }
+
+        // The Auto-Scroll Logic
+        function startFacultyAutoScroll() {
+            facultyTimer = setInterval(() => {
+                if (!facultyTrack) return;
+                
+                const cardWidth = facultyTrack.querySelector('.faculty-card').offsetWidth;
+                const maxScroll = facultyTrack.scrollWidth - facultyTrack.clientWidth;
+                
+                // If we hit the end (with a tiny 10px buffer for rounding errors), snap back to the start
+                if (facultyTrack.scrollLeft >= maxScroll - 10) {
+                    facultyTrack.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    // Otherwise, move to the next card
+                    facultyTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                }
+            }, 3000); // Scrolls every 3 seconds
+        }
+
+        function stopFacultyAutoScroll() {
+            clearInterval(facultyTimer);
+        }
+
+        function resetFacultyAutoScroll() {
+            stopFacultyAutoScroll();
+            startFacultyAutoScroll();
+        }
+
+        // Start it immediately
+        startFacultyAutoScroll();
+
+        // Pause on hover (Desktop) or touch (Mobile) so it doesn't fight the user!
+        if (facultyTrack) {
+            facultyTrack.addEventListener('mouseenter', stopFacultyAutoScroll);
+            facultyTrack.addEventListener('mouseleave', startFacultyAutoScroll);
+            
+            facultyTrack.addEventListener('touchstart', stopFacultyAutoScroll, {passive: true});
+            facultyTrack.addEventListener('touchend', startFacultyAutoScroll);
+        }
+
+        // 4. Gallery Preview Rotator
+        const galleryImgs = ['static/gallery1.webp', 'static/gallery2.webp', 'static/gallery3.webp'];
+        let gIdx = 0;
+        const galleryElement = document.getElementById('gallery-rotate');
+        if(galleryElement) {
+            setInterval(() => {
+                gIdx = (gIdx + 1) % galleryImgs.length;
+                galleryElement.style.opacity = '0'; // fade out
+                setTimeout(() => {
+                    galleryElement.src = galleryImgs[gIdx];
+                    galleryElement.style.opacity = '1'; // fade in
+                }, 500); // Wait for transition
+            }, 4000);
+        }
+
+        // 5. Program Modal Logic
+        function openModal(id) {
+            const content = document.getElementById(id + '-details').innerHTML;
+            document.getElementById('modal-body').innerHTML = content;
+            document.getElementById('programModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('programModal').style.display = 'none';
+        }
+
+        function scrollToContact() {
+            closeModal();
+            setTimeout(() => {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        }
+
+        // Close modal when clicking outside of the card
+        window.onclick = function(e) {
+            const modal = document.getElementById('programModal');
+            if (e.target === modal) closeModal();
+        }
+    </script>
+</body>
+</html>

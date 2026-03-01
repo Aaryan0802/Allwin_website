@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="static/logo.webp" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allwin Academy – Photo Gallery</title>
+    <link rel="icon" type="image/webp" href="static/logo.webp">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .gallery-page-wrapper {
+            padding: 130px 5% 80px; /* Clears the fixed header */
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .gallery-page-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            background: var(--grad-brand, linear-gradient(135deg, #4580c2 0%, #fb4b52 100%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .gallery-page-subtitle {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Smooth Dark Overlay on Hover */
+        .gallery-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15,23,42,0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .gallery-card:hover::after {
+            opacity: 1;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #4580c2, #fb4b52);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(251, 75, 82, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(251, 75, 82, 0.5);
+        }
+
+        @media(max-width: 768px) {
+            .gallery-grid { gap: 15px; }
+            .gallery-page-wrapper { padding: 100px 5% 50px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="static/logo.webp" alt="Allwin Science Academy Logo" class="logo-img" loading="lazy">
+                <div class="logo-text">Allwin Science Academy</div>
+            </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="#" style="color: var(--primary-red);">Gallery</a></li> <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="gallery-page-wrapper">
+        <h1 class="gallery-page-title">Our Photo Gallery</h1>
+        <p class="gallery-page-subtitle">Capturing moments of learning, mentorship, and success.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="static/gallery1.webp" loading="lazy" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-card">
+                <img src="static/gallery2.webp" loading="lazy" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-card">
+                <img src="static/gallery3.webp" loading="lazy" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-card">
+                <img src="static/gallery4.webp" loading="lazy" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-card">
+                <img src="static/gallery5.webp" loading="lazy" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-card">
+                <img src="static/gallery6.webp" loading="lazy" alt="Gallery Image 6">
+            </div>
+        </div>
+        
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    <footer id="contact" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 5% 40px; width: 100%;">
+        <div class="footer-content" style="display: flex; gap: 40px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap;">
+            
+            <div class="footer-map" style="flex: 1; min-width: 300px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Visit Us</h3>
+                <p style="color: #cbd5e1; margin-bottom: 5px;">Dhanashree Building, above Sai Cafe Katta,</p>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">Balaji Nagar, Dhankawadi, Pune-43.</p>
+                <p style="font-weight: 700; margin-bottom: 20px; color: white;">Phone: +91 90499 88399</p>
+                
+                <div class="map-container" style="width: 100%; height: 250px; border-radius: 15px; overflow: hidden; margin-top: 15px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4702.151745765841!2d73.85692940035088!3d18.46513387401364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb429b2fe773%3A0xcff498e0c778d9a3!2sAllwin%20Academy!5e0!3m2!1sen!2sin!4v1769959564008!5m2!1sen!2sin" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form" style="flex: 1; min-width: 300px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Enquire Now</h3>
+                <form action="enquiries.php" method="POST">
+                    <input type="text" name="name" placeholder="Full Name" required style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-family: inherit;">
+                    <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-family: inherit;">
+                    <select name="course" required style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-family: inherit;">
+                        <option value="" disabled selected style="color: #000;">Select Course</option>
+                        <option value="jee" style="color: #000;">JEE</option>
+                        <option value="neet" style="color: #000;">NEET</option>
+                        <option value="mht-cet" style="color: #000;">MHT-CET</option>
+                        <option value="boards-11-12" style="color: #000;">11th & 12th Boards</option>
+                        <option value="boards-10" style="color: #000;">10th Boards</option>
+                    </select>
+                    <button type="submit" class="submit-btn" style="width: 100%; padding: 15px; background: #fb4b52; color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 1.1rem; cursor: pointer;">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+
+    <div class="social-float">
+        <a href="https://www.instagram.com/allwin_academy_pune?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon facebook" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://wa.me/919049988399" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+
+            // Close menu when clicking a link
+            navLinks.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    navLinks.classList.remove('open');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
